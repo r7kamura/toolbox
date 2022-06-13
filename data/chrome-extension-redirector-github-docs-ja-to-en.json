@@ -2,22 +2,20 @@
   "createdBy": "Redirector v3.5.3",
   "createdAt": "2022-05-05T22:35:21.668Z",
   "redirects": [
-      {
-          "description": "GitHub Docs ja to en",
-          "exampleUrl": "https://docs.github.com/ja/repositories/creating-and-managing-repositories/creating-a-template-repository",
-          "exampleResult": "https://docs.github.com/en//repositories/creating-and-managing-repositories/creating-a-template-repository",
-          "error": null,
-          "includePattern": "https://docs.github.com/ja($|/.*)",
-          "excludePattern": "",
-          "patternDesc": "docs.github.com/ja to docs.github.com/en",
-          "redirectUrl": "https://docs.github.com/en/$1",
-          "patternType": "R",
-          "processMatches": "noProcessing",
-          "disabled": false,
-          "grouped": false,
-          "appliesTo": [
-              "main_frame"
-          ]
-      }
+    {
+      "description": "GitHub Docs ja to en",
+      "exampleUrl": "https://docs.github.com/ja/repositories/creating-and-managing-repositories/creating-a-template-repository",
+      "exampleResult": "https://docs.github.com/en//repositories/creating-and-managing-repositories/creating-a-template-repository",
+      "error": null,
+      "includePattern": "https://docs.github.com/ja($|/.*)",
+      "excludePattern": "",
+      "patternDesc": "docs.github.com/ja to docs.github.com/en",
+      "redirectUrl": "https://docs.github.com/en/$1",
+      "patternType": "R",
+      "processMatches": "noProcessing",
+      "disabled": false,
+      "grouped": false,
+      "appliesTo": ["main_frame"]
+    }
   ]
 }
