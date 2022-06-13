@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 require 'pathname'
 
-Pathname.glob("**/*.{haml,erb}").each do |pathname|
+Pathname.glob('**/*.{haml,erb}').each do |pathname|
   next unless pathname.basename.to_s.match?(/\A\w+\.\w+\z/)
 
   pathname.rename(
