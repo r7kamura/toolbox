@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 RSpec.describe FactoryBot do
   describe '.lint' do
     subject do
