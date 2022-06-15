@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # @example Rails application example.
 #   class ApplicationController < ActionController::Base
 #     if ::Rails.env.test?
@@ -26,7 +28,7 @@ class UnhandledExceptionRspecFormatter
     @output = output
   end
 
-  def example_failed(notification)
+  def example_failed(_notification)
     exception = self.class.unhandled_exception
     return if exception.nil?
 
