@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# Output dependent gems and their versions in TSV format.
+# Output dependent gems information in TSV format.
 #
 # Usage:
 #
@@ -18,9 +18,12 @@ dependent_gem_names = lock_file_parser.dependencies.keys.to_set
 dependent_gem_specs = lock_file_parser.specs.select { |spec| dependent_gem_names.include?(spec.name) }
 
 output = dependent_gem_specs.map do |spec|
+  specification = Gem::Specification.find_by_name(spec.name)
+  uri = specification.metadata['source_code_uri'] || specification.homepage
   [
     spec.name,
-    spec.version
+    spec.version,
+    uri
   ].join("\t")
 end.join("\n")
 puts output
